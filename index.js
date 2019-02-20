@@ -16,3 +16,15 @@ function merge(first, second) {
   }
   return sortedArray.concat(first).concat(second)
 }
+
+function mergeSort(array) {
+  let midpoint = array.length/2
+  let first = array.slice(0, midpoint)
+  let second = array.slice(midpoint, array.length)
+  
+  if (array.length > 1) {
+    return merge(mergeSort(first), mergeSort(second))
+  } else {
+    return array
+  }
+}
