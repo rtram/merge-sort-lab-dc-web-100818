@@ -14,5 +14,5 @@ function merge(first, second) {
       sortedArray.push(findMinAndRemoveSorted(second))
     }
   }
-  return sortedArray.concat
+  return sortedArray.concat(first).concat(second)
 }
